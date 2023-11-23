@@ -1,0 +1,41 @@
+.jakmall
+    &__finish
+        &--container
+            position absolute
+            top 40%
+            transform translate(-50%, -50%)
+            left 50%
+
+            +lg()  
+                position relative
+                top auto
+                transform translate(0, 0)
+                left auto
+
+            &-back 
+                button
+                    background-color transparent
+                    border none medium transparent
+
+                    &:hover
+                        cursor pointer
+
+                    span 
+                        color jakmall-black
+                        font-size 14px
+
+                        &:first-child 
+                            margin-right 10px
+        
+        &--notification, &--order-id, &--container-back
+            font-family 'Inter', sans-serif
+        
+        &--order-id 
+            span 
+                font-size 14px
+
+        &--notification
+            margin-bottom 70px
+            p 
+                color rgba(0, 0, 0, 0.6)
+                font-size 14px

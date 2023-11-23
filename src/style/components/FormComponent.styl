@@ -1,0 +1,107 @@
+.jakmall
+    &__form--container
+        background-color jakmall-white
+        min-height 550px
+        position relative
+        padding 80px 20px 20px 40px
+
+        +lg() 
+            padding-left 20px
+
+        &-back
+            position absolute
+            left 40px
+            top 30px
+
+            +lg()  
+                position relative
+                left auto
+                top auto
+
+            button
+                background-color transparent
+                border none medium transparent
+
+                &:hover
+                    cursor pointer
+
+                span 
+                    color jakmall-black
+                    font-size 14px
+
+                    &:first-child 
+                        margin-right 10px
+                    
+                    &:not(:first-child)
+                        font-family 'Inter', sans-serif
+        
+        &-content
+            display flex
+            width 100%
+            &-1 
+                position relative
+                width calc(65%)
+                margin-right: 30px
+
+                +lg() 
+                    width 100%
+                    margin-right 0
+                    margin-bottom 30px
+                
+            &-2
+                width calc(35%)
+                min-height: 700px
+
+                +lg()  
+                    width 100%
+                    min-height 400px
+            
+            +lg()
+                display block
+
+        
+        &-checkbox
+            position absolute
+            top 30px
+            right 0
+            display flex
+            align-items center
+
+            +lg() 
+                position relative
+                top auto
+                right auto
+                margin-bottom 30px
+
+            #checkboxInput
+                width 20px
+                height 20px
+
+                &:focus-visible
+                    outline none
+
+                &+label
+                    position absolute
+                    width 20px
+                    height 20px
+                    left 2.5px
+                    top 1.5px
+                    background-color jakmall-white
+                    border 2px solid jakmall-green
+
+                    &::after 
+                        content '\f00c'
+                        display none
+                        font normal normal normal 20px/1 FontAwesome
+                        position absolute
+                        text-align center
+                        left 0
+                        top 0
+                        color jakmall-green
+                &:checked
+                    &+label
+                        &::after
+                            display block
+                &~span 
+                    font-family 'Inter', sans-serif
+                    margin-left 10px          

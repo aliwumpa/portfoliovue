@@ -1,0 +1,76 @@
+.jakmall
+    &__summary
+        &--container
+            display flex
+            height 100%
+            flex-direction column
+            justify-content space-between
+            padding-left 20px
+            padding-right 20px
+
+            +lg() 
+                padding-left 0
+                padding-right 0
+
+            p
+                font-family 'Inter', sans-serif 
+        
+        &--title
+            h2
+                margin-top 30px
+            p 
+                margin-bottom 20px
+        
+        &--estimation,&--payment
+            border-top 2px solid jakmall-grey
+            padding-top 20px
+
+        &--estimation
+            padding-bottom 20px
+
+            p
+                font-weight 500 
+            span
+                color jakmall-green
+
+        &--payment
+            p
+                &:first-child
+                    font-weight 500
+                &:last-child
+                    color jakmall-green
+
+        &--content-2
+            div
+                &:not(:last-child)
+                    margin-bottom 20px
+
+                &:not(.jakmall__summary--total)
+                    span
+                        font-family 'Inter', sans-serif
+                        font-size 14px
+                span
+                    &:first-child
+                        text-align left
+                    &:last-child
+                        text-align right
+                        float right
+                        font-weight bold
+        
+        &--total
+            span
+                font-family 'Montserrat', sans-serif
+                font-size 24px
+                font-weight bold
+                color jakmall-orange
+        &--button
+            button
+                font-family 'Inter', sans-serif
+                cursor pointer
+                font-size 18px
+                border none medium transparent
+                padding 20px 40px 20px 40px
+                color jakmall-white
+                font-weight 500
+                background-color jakmall-orange
+                width 100%

@@ -1,0 +1,54 @@
+.jakmall
+    &__delivery
+        &--container
+            display grid
+            grid-template-columns 2fr 2fr
+            grid-row-gap 30px
+            grid-column-gap 30px
+
+            +lg() 
+                grid-template-columns 1fr
+                grid-column-gap 0
+
+            &-input
+                position relative
+                
+                label 
+                    position absolute
+                    font-family 'Inter', sans-serif
+                    font-size 13px
+                    top 50%
+                    transform translateY(-50%)
+                    left 18px
+                    color jakmall-placeholder
+                    pointer-events none
+                    z-index 2
+
+                    &.custom-label
+                        top 20px
+                        transform translateY(0)
+
+                        &.success,&.error
+                            top 20px
+
+
+                    &.success,&.error
+                        top 10px
+                        transform translateY(0)
+                    
+                    &.success
+                        color jakmall-green !important
+
+                    &.error
+                        color jakmall-orange !important
+                        
+                input
+                    padding 25px 15px 20px 15px
+                    width calc(100% - 30px)
+                    font-family 'Inter', sans-serif
+                    font-size 16px
+                    font-weight bold
+                    text-overflow: ellipsis;
+
+                    &.custom-height
+                        height 80px

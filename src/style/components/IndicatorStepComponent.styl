@@ -1,0 +1,62 @@
+.jakmall__indicator-step
+    &--outer
+        position absolute
+        z-index 2
+        top 20px
+        left 50%
+        transform translateX(-50%)
+        background-color jakmall-yellow
+        padding 10px 30px 10px 30px
+        border-radius 35px
+
+        ul
+            display flex
+            align-items center
+            justify-content space-between
+            list-style none
+            padding-inline-start 0 
+
+            li
+                position relative
+
+                &:not(:last-child)                    
+                    &::after 
+                        content '\f054'
+                        position relative
+                        right 0
+                        top 50%
+                        transform translateY(-50%)
+                        font normal normal normal 14px/1 FontAwesome
+                        color jakmall-orange 
+                        margin-right 25px
+                        margin-left 25px
+
+                        +lg()  
+                            margin-right 10px
+                            margin-left 10px
+                span 
+                    font-family 'Inter', sans-serif
+                    font-size 16px
+                    color jakmall-orange
+                    font-weight 500
+
+                    &.active
+                        color jakmall-white
+                        background-color jakmall-orange !important
+
+                    &:first-child
+                        display inline-block
+                        width 30px
+                        height 25px
+                        text-align center
+                        padding-top 5px
+                        border-radius 50%
+                        background-color rgba(255, 138, 0, 0.2)
+                        margin-right 10px
+
+                        +lg()  
+                            margin-right 0
+                    
+                    &:last-child
+                        +lg()  
+                            display none

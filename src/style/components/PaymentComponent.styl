@@ -1,0 +1,58 @@
+.jakmall
+    &__transaction
+        &--outer 
+            max-width 80%
+
+            +lg() 
+                max-width 100%
+
+        &-shipment--container,&-payment--container
+            display flex
+            div
+                width calc(100% / 3)
+                border 2px solid jakmall-border
+                padding 15px 15px 10px 15px
+                cursor pointer
+
+                p
+                    font-family 'Inter', sans-serif
+                    color jakmall-black
+                    margin-top 0
+
+                    &:first-child 
+                        margin-bottom 10px
+
+                    &:last-child
+                        margin-bottom 0
+                    
+                &:not(:last-child)
+                    margin-right 10px
+        
+        &-shipment--container 
+            margin-bottom 60px
+                
+        &-payment--container
+            div                
+                &:not(:first-child)
+                    p
+                        display: table-cell
+                        vertical-align middle
+                        height 45px
+        
+        &-shipment--active,&-payment--active
+            position relative
+            border 3px solid jakmall-green !important 
+
+            p
+                font-weight bold
+
+            &::after
+                content '\f00c'
+                position absolute
+                font normal normal normal 20px/1 FontAwesome
+                top 50%
+                transform translateY(-50%)
+                right 30px
+                color jakmall-green
+
+

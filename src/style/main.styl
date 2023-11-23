@@ -1,0 +1,103 @@
+// import utils
+@import './utils/fonts';
+@import './utils/variables';
+@import './utils/mixins';
+
+
+html,body
+    font-family 'Montserrat', sans-serif
+
+h1
+    font-family 'Monsterrat', sans-serif
+    font-weight bold
+    font-size 36px
+    display inline-block
+    width 300px
+    color jakmall-orange
+    margin-bottom 35px
+    background linear-gradient(jakmall-underline, jakmall-underline) 0 80% / 100% 8px no-repeat
+
+h2
+    font-family 'Monsterrat', sans-serif
+    font-weight bold
+    font-size 24px 
+    color jakmall-orange
+    margin-bottom 10px   
+
+body
+    background-color jakmall-yellow
+    padding 55px 50px 95px 50px
+    position relative
+
+    input
+        &.success,&.error
+            &:focus-visible
+                outline none
+
+        &.success
+            border 3px solid jakmall-green
+
+            &:focus
+                border 3px solid jakmall-green
+            &:active
+                border 3px solid jakmall-green
+
+        &.error
+            border 3px solid jakmall-orange
+
+            &:focus
+                border 3px solid jakmall-orange
+            &:active
+                border 3px solid jakmall-orange
+
+.error--message
+    position absolute
+    bottom -20px
+    padding-left 20px
+    font-family 'Inter', sans-serif
+    font-size 13px
+    color jakmall-red
+
+    &::before 
+        content '\f071'
+        position absolute
+        font normal normal normal 13px/1 FontAwesome
+        left 0
+        top 2px
+        color jakmall-red
+
+.counter--text
+    position absolute
+    bottom -20px
+    right 20px
+    font-family 'Inter', sans-serif
+    font-size 13px
+
+label
+    &.icon-success,&.icon-error
+        position absolute
+        top 40% !important
+        transform translateY(0) !important
+        right 30px
+        left: auto !important
+        &::after
+            position absolute
+            font normal normal normal 20px/1 FontAwesome
+    &.icon-success
+        color jakmall-green !important 
+
+        &::after
+            content '\f00c'
+    &.icon-error
+        color jakmall-orange !important
+
+        &::after
+            content '\f00d'
+
+// import style components    
+@import './components/IndicatorStepComponent';
+@import './components/FormComponent';
+@import './components/DeliveryComponent';
+@import './components/OrderSummaryComponent';
+@import './components/PaymentComponent';
+@import './components/FinishComponent';
