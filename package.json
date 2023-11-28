@@ -28,6 +28,7 @@
     "cross-env": "^5.0.5",
     "css-loader": "^0.28.7",
     "file-loader": "^1.1.11",
+    "url-loader": "^1.0.1",
     "stylus": "^0.54.8",
     "stylus-loader": "^3.0.2",
     "vue-loader": "^13.0.5",
