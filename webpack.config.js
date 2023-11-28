@@ -5,7 +5,7 @@ module.exports = {
   entry: './src/main.js',
   output: {
     path: path.resolve(__dirname, './dist'),
-    publicPath: '/',
+    publicPath: 'dist/',
     filename: 'build.js'
   },
   module: {
@@ -27,7 +27,7 @@ module.exports = {
       // },
       { 
         test: /\.(woff2?|eot|ttf|otf|svg)$/, 
-        loader: 'url-loader?publicPath=./&limit=10000&name=fonts/[name].[ext]' 
+        loader: 'url-loader?publicPath=&limit=10000&name=fonts/[name].[ext]' 
       },
       {
         test: /\.(png|jpg|gif|svg)$/,
