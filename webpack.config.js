@@ -14,17 +14,6 @@ module.exports = {
         test: /\.styl$/,
         loader: "stylus-loader",
       },
-      // {
-      //   test: /\.(woff2?|eot|ttf|otf)(\?.*)?$/,
-      //   use: [
-      //     {
-      //       loader: 'file-loader',
-      //       options: {
-      //         name: 'fonts/[name].[ext]',
-      //       },
-      //     }
-      //   ]
-      // },
       { 
         test: /\.(woff2?|eot|ttf|otf|svg)$/, 
         loader: 'url-loader?publicPath=&limit=10000&name=fonts/[name].[ext]' 
