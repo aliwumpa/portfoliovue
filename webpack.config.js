@@ -4,8 +4,8 @@ var webpack = require('webpack')
 module.exports = {
   entry: './src/main.js',
   output: {
-    path: path.resolve(__dirname, './dist'),
-    publicPath: '/dist/',
+    path: path.resolve(__dirname, 'dist'),
+    publicPath: '/',
     filename: 'build.js'
   },
   module: {
@@ -20,7 +20,9 @@ module.exports = {
           {
             loader: 'file-loader',
             options: {
-              name: 'fonts/[name].[ext]',
+              name: '[name].[ext]',
+              outputPath: 'fonts/',
+              publicPath: '/'
             },
           }
         ]
