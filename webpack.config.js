@@ -20,7 +20,7 @@ module.exports = {
           {
             loader: 'file-loader',
             options: {
-              name: 'fonts/[name].[hash:8].[ext]',
+              name: 'fonts/[name].[ext]',
             },
           }
         ]

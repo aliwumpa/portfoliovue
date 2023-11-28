@@ -32,10 +32,10 @@ const store = new Vuex.Store({
 	tick_as_dropshipper: false,
 	formDataDelivery: {
 		email: '',
-		phone: null,
-		address: '',
 		dropshipper_name: '',
-		dropshipper_phone: null
+		phone: null,
+		dropshipper_phone: null,
+		address: ''
 	},
 	formDataPayment: {
 		ewallet_quota: 1500000,
