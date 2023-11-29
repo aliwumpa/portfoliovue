@@ -2,13 +2,15 @@
     <div class="jakmall__delivery--container">
         <div v-for="(value, key, index) in formDataDelivery" :key="key" class="jakmall__delivery--container-input">
             <label :class="{ 'success' : isInputValid(key) && formDataDelivery[key], 'error' : !isInputValid(key) && formDataDelivery[key], 
-            'custom-label' : key === 'address' }">
+            'custom-label' : customLabelClass(key) }">
                 {{ loopThroughPlaceholders(index) }}
             </label>
             <input
                 v-model="formDataDelivery[key]"
                 :class="{ 'success' : isInputValid(key) && formDataDelivery[key], 'error' : !isInputValid(key) && formDataDelivery[key]
-                , 'custom-height' : key === 'address'}"
+                , 'custom-height' : customHeightClass(key) }"
+                :type="customTypeInput(key)"
+                :pattern="customPatternInput(key)"
                 :disabled="!tickAsDropshipper"
                 @input="validateField(key); updateCounter(key)"
             />
@@ -27,6 +29,12 @@ export default {
             const formData = JSON.parse(storedFormData);
             this.formDataDelivery = formData;
         }
+    },
+    mounted() {
+        this.customLabelClass();
+        this.customHeightClass();
+        this.customTypeInput();
+        this.customPatternInput();
     },
     data () {
         return {
@@ -69,6 +77,34 @@ export default {
         },
     },
     methods: {
+        customLabelClass(key) {
+            if(key === 'address') {
+                return true;
+            } else {
+                return false;
+            }
+        },
+        customHeightClass(key) {
+            if(key === 'address') {
+                return true;
+            } else {
+                return false;
+            }
+        },
+        customTypeInput(key) {
+            if(key === 'phone') {
+                return "tel";
+            } else {
+                return false;
+            }
+        }, 
+        customPatternInput(key) {
+            if(key === 'phone') {
+                return "[0-9]{10}";
+            } else {
+                return false;
+            }
+        }, 
         loopThroughPlaceholders(index) {
             return this.placeholders[index] || '';
         },

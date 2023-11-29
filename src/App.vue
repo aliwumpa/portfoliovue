@@ -96,6 +96,8 @@ export default {
           return 'cart';
         case 2 :
           return 'delivery';
+        case 3 :
+          return 'payment';
         default :
           return true;
       }
@@ -128,10 +130,10 @@ export default {
     resetFormData() {
       this.$store.dispatch('updateFormDataDelivery', {
         email: '',
-        phone: null,
-        address: '',
         dropshipper_name: '',
-        dropshipper_phone: null
+        phone: null,
+        dropshipper_phone: null,
+        address: ''
       });
     },
     backStep(step) {

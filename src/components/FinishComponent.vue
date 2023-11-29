@@ -24,10 +24,10 @@ export default {
         return {
             initialFormDataDelivery: {
                 email: '',
-                phone: null,
-                address: '',
                 dropshipper_name: '',
-                dropshipper_phone: null
+                phone: null,
+                dropshipper_phone: null,
+                address: ''
             },
             initialFormDataPayment: {
                 ewallet_quota: 1500000,
